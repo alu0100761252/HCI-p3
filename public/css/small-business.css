@@ -1,0 +1,152 @@
+
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    background-color: #fffde7;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+li {
+    float: left;
+}
+
+
+.preinfo{
+  text-align: center;
+  color: #827717;
+  font-family: fantasy;
+}
+.preformu{
+  text-align: center;
+  color: #827717;
+  font-family: fantasy;
+}
+
+.generalformu{
+  background-color: #dce775;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+
+.info{
+  text-align: center;
+  font-family: fertigo;
+}
+
+.generalinfo{
+  background-color: #f0f4c3;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #113;
+}
+
+.resuforrmu
+{
+	background-color:#fff59d;
+	margin-left: 10%;
+	margin-bottom: 50px;
+	margin-top: 50px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px #999;
+  padding: 6px;
+  font-family: sans-serif;
+
+
+}
+
+.formulario{
+  width: 490px;
+  height: 403px;
+  background-color:#fff59d;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #999;
+
+  margin-bottom: 50px;
+  margin-top: 50px;
+  padding: 6px;
+  margin-left: 50px;
+}
+
+.pie{
+  background-color: #fff176;
+  text-align: center;
+  font-family: sans-serif;
+  border-radius: 10px;
+
+
+}
+
+h1{
+  color: #fbc02d;
+  font-weight: bold;
+  font-family: Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler'
+
+
+}
+.eeslogan{
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+.izqr{
+
+  background-color: #f5f5f5;
+  color: black;
+  padding: 3px;
+font-family: inherit;
+
+}
+
+.dcha{
+
+  background-color: #f5f5f5;
+  color: black;
+  padding: 3px;
+font-family: inherit;
+
+}
+
+.centro{
+
+  background-color: #f5f5f5;
+  color: black;
+  padding: 3px;
+  font-family: inherit;
+
+
+}
+
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}
