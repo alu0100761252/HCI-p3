@@ -10,6 +10,18 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/small-business.css" rel="stylesheet">
 <link rel="icon" type="image/jpg" href="favicon.jpg"/>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+		<script>
+			// Initialize Firebase
+			var config = {
+				apiKey: "AIzaSyDFhnaDaJmvf2f_L8nd1ruvvS8fuoYq7TI",
+				authDomain: "usuarios-752ae.firebaseapp.com",
+				databaseURL: "https://usuarios-752ae.firebaseio.com",
+				storageBucket: "usuarios-752ae.appspot.com",
+				messagingSenderId: "743441789615"
+			};
+			firebase.initializeApp(config);
+		</script>
 </head>
 <body>
 <!-- Navigation -->
@@ -55,7 +67,7 @@
 		<li role="presentation"><a href="#formulito" aria-controls="profile" role="tab" data-toggle="tab">Formulario</a></li>
 		<li role="presentation"><a href="#resultado" aria-controls="messages" role="tab" data-toggle="tab">Resultado Formulario</a></li>
 		<li role="presentation"><a href="#info" aria-controls="messages" role="tab" data-toggle="tab">Info Pagina</a></li>
-		<li role="presentation"><a href="#fireba" aria-controls="messages" role="tab" data-toggle="tab">Firebase</a></li>
+		<li role="presentation"><a href="#fireba" aria-controls="messages" role="tab" data-toggle="tab">Chat</a></li>
 			<li role="presentation"><a href="#angu" aria-controls="messages" role="tab" data-toggle="tab">Seccion Angular</a></li>
 	</ul>
 	<!-- Tab panes -->
@@ -219,7 +231,20 @@
 
 					<div role="tabpanel" class="tab-pane active" id="fireba">
 
+						<div class="chaat" id="wrapper">
+								<div id="menu">
 
+									<div style="clear:both"></div>
+								</div>
+
+								<div id="chatbox"></div>
+								<p> Bienvenido señor/a, <b></b></p>
+								<input name="usermsg" type="text" id="nameInput" size="63" />
+								<p> Escriba su mensaje y pulse enviar, <b></b></p>
+								<input name="usermsg" type="text" id="messageInput" size="63" />
+								<input name="submitmsg" type="submit"  id="nameInput" value="Enviar" onclick="enviar()"/>
+
+					 </div>
 
 
 
@@ -232,7 +257,7 @@
 
 
 					<div role="tabpanel" class="tab-pane active" id="angu">
-					<!--	<div class="row" ng-controller="appController"> -->
+						<!--<div class="row" ng-controller="appController"> -->
 						<div class="col-md-6">
 
 				        <h1 class="subheader">Consumir un json con $http en AngularJS</h1>
@@ -244,19 +269,9 @@
 						     </li>
 				        </ul>
 							</div>
+             </div>
+						<!-- </div> -->
 
-									<div class="col-md-6">
-								 <!--<div class="row" ng-controller="appController"> -->
-				          <h1 class="subheader">Consumir un json con resource en AngularJS</h1>
-			            	<ul class="panel callout radius">
-					        	<li ng-repeat="data in datosResource">
-							    	<h2>Id: {{ data.id }} </h2>
-										<h2>Nombre: {{ data.nombre }}</h2>
-										<h2> Profesión: {{ data.profesion }}</h2>
-					       	</li>
-				           </ul>
-								 </div>
-							 </div>
 
 
 
@@ -338,21 +353,12 @@
 			<!-- Bootstrap Core JavaScript -->
 			<script src="js/bootstrap.min.js"></script>
 			<script type="text/javascript" src="mi.js"></script>
+			<script type="text/javascript" src="js/chat.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 			<script type="text/javascript" src="js/bd.js"></script>
+			<script type="text/javascript" src="js/mycontroller.js"></script>
 
-			<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-					<script>
-					  // Initialize Firebase
-					  var config = {
-					    apiKey: "AIzaSyDFhnaDaJmvf2f_L8nd1ruvvS8fuoYq7TI",
-					    authDomain: "usuarios-752ae.firebaseapp.com",
-					    databaseURL: "https://usuarios-752ae.firebaseio.com",
-					    storageBucket: "usuarios-752ae.appspot.com",
-					    messagingSenderId: "743441789615"
-					  };
-					  firebase.initializeApp(config);
-					</script>
+
 
 
 			</body>
