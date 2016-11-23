@@ -10,7 +10,6 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <link href="css/small-business.css" rel="stylesheet">
 <link rel="icon" type="image/jpg" href="favicon.jpg"/>
-
 </head>
 <body>
 <!-- Navigation -->
@@ -56,8 +55,8 @@
 		<li role="presentation"><a href="#formulito" aria-controls="profile" role="tab" data-toggle="tab">Formulario</a></li>
 		<li role="presentation"><a href="#resultado" aria-controls="messages" role="tab" data-toggle="tab">Resultado Formulario</a></li>
 		<li role="presentation"><a href="#info" aria-controls="messages" role="tab" data-toggle="tab">Info Pagina</a></li>
-		<li role="presentation"><a href="#angu" aria-controls="messages" role="tab" data-toggle="tab">Seccion Angular</a></li>
 		<li role="presentation"><a href="#fireba" aria-controls="messages" role="tab" data-toggle="tab">Firebase</a></li>
+			<li role="presentation"><a href="#angu" aria-controls="messages" role="tab" data-toggle="tab">Seccion Angular</a></li>
 	</ul>
 	<!-- Tab panes -->
 	<div class="tab-content">
@@ -141,8 +140,6 @@
 			</div>
 			</footer>
 		</div>
-
-
 		<div role="tabpanel" class="tab-pane" id="formulito">
 			<div class="row">
 				<div class="col-lg-12">
@@ -157,10 +154,10 @@
 				<div class="col-md-6">
 					<div id="formulito" class="formulario">
 						<h4>SI QUIERES COMPRAR EL PRODUCTO REGISTRATE:</h4>
-						<form name="miformu" action="ok.html" method="get" onsubmit="validarEmail(document.miformu.email.value);" one>
-							 Nombre: <input type="text" name="nombre" ng-model="nombree" required>
-							Apellido: <input type="text" name="apellido" ng-model="apellidoo" required><br>
-							 Email: <input type="text" name="email" ng-model="emaill" required>
+						<form name="miformu"   method="get" onsubmit="validarEmail(document.miformu.email.value);">
+							 Nombre: <input type="text" name="nombre" id="nombre" ng-model="nombree" required>
+							Apellido: <input type="text" name="apellido" id="apellidos" ng-model="apellidoo" required><br>
+							 Email: <input type="text" name="email" id ="email"ng-model="emaill" required>
 							<p>
 								<input type="radio" name="sex" value="masculino">Masculino<br>
 								<input type="radio" name="sex" value="femenino">Femenino
@@ -176,12 +173,12 @@
 									<p>
 										 - Si desea añadir algo mas:
 									</p>
-									<textarea name="texto" ng-model="textoo" rows="5" cols="55">
+									<textarea name="texto" id="comentario" ng-model="textoo" rows="5" cols="55">
 									Introducir texto </textarea>
 									<p>
 									</p>
 									<center>
-									<input type="submit" value="Enviar">
+									<input type="submit" value="Enviar" onclick="bd()">
 									<input type="reset" value="Borrar">
 									</center>
 								</form>
@@ -215,44 +212,54 @@
 					</div>
 				</div>
 
-				<div role="tabpanel" class="tab-pane active" id="angu">
-					<div class="row" ng-controller="appController">
+
+
+
+
+
+					<div role="tabpanel" class="tab-pane active" id="fireba">
+
+
+
+
+
+					</div>
+
+
+
+
+
+
+
+					<div role="tabpanel" class="tab-pane active" id="angu">
+					<!--	<div class="row" ng-controller="appController"> -->
 						<div class="col-md-6">
 
-			        <h1 class="subheader">Consumir un json con $http en AngularJS</h1>
-		         	<ul class="panel callout radius">
-				       	<li ng-repeat="data in datos">
-									<h2>Id: {{ data.id }} </h2>
-									<h2>Nombre: {{ data.nombre }}</h2>
-									<h2> Profesión: {{ data.profesion }}</h2>
-					     </li>
-			        </ul>
-						</div>
+				        <h1 class="subheader">Consumir un json con $http en AngularJS</h1>
+			         	<ul class="panel callout radius">
+					       	<li ng-repeat="data in datos">
+										<h2>Id: {{ data.id }} </h2>
+										<h2>Nombre: {{ data.nombre }}</h2>
+										<h2> Profesión: {{ data.profesion }}</h2>
+						     </li>
+				        </ul>
+							</div>
 
-								<div class="col-md-6">
-							 <div class="row" ng-controller="appController">
-			          <h1 class="subheader">Consumir un json con resource en AngularJS</h1>
-		            	<ul class="panel callout radius">
-				        	<li ng-repeat="data in datosResource">
-						    	<h2>Id: {{ data.id }} </h2>
-									<h2>Nombre: {{ data.nombre }}</h2>
-									<h2> Profesión: {{ data.profesion }}</h2>
-				       	</li>
-			           </ul>
+									<div class="col-md-6">
+								 <!--<div class="row" ng-controller="appController"> -->
+				          <h1 class="subheader">Consumir un json con resource en AngularJS</h1>
+			            	<ul class="panel callout radius">
+					        	<li ng-repeat="data in datosResource">
+							    	<h2>Id: {{ data.id }} </h2>
+										<h2>Nombre: {{ data.nombre }}</h2>
+										<h2> Profesión: {{ data.profesion }}</h2>
+					       	</li>
+				           </ul>
+								 </div>
 							 </div>
-						 </div>
-          </div>
-				</div>
 
-				<div role="tabpanel" class="tab-pane active" id="fireba">
-					<div class="col-md-6">
-            <h1>esto es una prueba</h1>
-				  </div>
 
-					<div class="col-md-6">
-						<h1>para firebase</h1>
-					</div>
-			</div>
+
 
 				<div role="tabpanel" class="tab-pane" id="info">
 					<div class="container generalinfo">
@@ -332,22 +339,21 @@
 			<script src="js/bootstrap.min.js"></script>
 			<script type="text/javascript" src="mi.js"></script>
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-			<script type="text/javascript" src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-tabs.js"></script>
-			<script type="text/javascript" src="bootstrap.js"></script>
-			<script type="text/javascript" src="bootstrap.min.js"></script>
-			<script src="https://cdn.firebase.com/js/client/2.2.9/firebase.js"></script>
-			<script type="text/javascript" src="js/app.js"></script>
+			<script type="text/javascript" src="js/bd.js"></script>
+
 			<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-			<script>
-			  // Initialize Firebase
-			  var config = {
-			    apiKey: "AIzaSyDFhnaDaJmvf2f_L8nd1ruvvS8fuoYq7TI",
-			    authDomain: "usuarios-752ae.firebaseapp.com",
-			    databaseURL: "https://usuarios-752ae.firebaseio.com",
-			    storageBucket: "usuarios-752ae.appspot.com",
-			    messagingSenderId: "743441789615"
-			  };
-			  firebase.initializeApp(config);
-			</script>
+					<script>
+					  // Initialize Firebase
+					  var config = {
+					    apiKey: "AIzaSyDFhnaDaJmvf2f_L8nd1ruvvS8fuoYq7TI",
+					    authDomain: "usuarios-752ae.firebaseapp.com",
+					    databaseURL: "https://usuarios-752ae.firebaseio.com",
+					    storageBucket: "usuarios-752ae.appspot.com",
+					    messagingSenderId: "743441789615"
+					  };
+					  firebase.initializeApp(config);
+					</script>
+
+
 			</body>
 			</html>

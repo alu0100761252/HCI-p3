@@ -52,7 +52,7 @@ li a {
 }
 
 li a:hover {
-    background-color: #113;
+    background-color: black;
 }
 
 .resuforrmu
@@ -62,7 +62,7 @@ li a:hover {
 	margin-bottom: 50px;
 	margin-top: 50px;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px #999;
+  box-shadow: 2px 2px 5px #999;
   padding: 6px;
   font-family: sans-serif;
 
@@ -79,7 +79,6 @@ li a:hover {
   margin-bottom: 50px;
   margin-top: 50px;
   padding: 6px;
-  margin-left: 50px;
 }
 
 .pie{
