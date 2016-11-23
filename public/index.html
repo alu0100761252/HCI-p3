@@ -11,7 +11,7 @@
 <link href="css/small-business.css" rel="stylesheet">
 <link rel="icon" type="image/jpg" href="favicon.jpg"/>
 <script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
-		<script>
+<script>
 			// Initialize Firebase
 			var config = {
 				apiKey: "AIzaSyDFhnaDaJmvf2f_L8nd1ruvvS8fuoYq7TI",
@@ -64,11 +64,11 @@
 	<!-- Nav tabs -->
 	<ul class="nav nav-tabs" role="tablist">
 		<li role="presentation" class="active"><a href="#ini" aria-controls="home" role="tab" data-toggle="tab">Inicio</a></li>
-		<li role="presentation"><a href="#formulito" aria-controls="profile" role="tab" data-toggle="tab">Formulario</a></li>
+		<li role="presentation"><a href="#formulito" aria-controls="profile" role="tab" data-toggle="tab">Rellenar Formulario</a></li>
 		<li role="presentation"><a href="#resultado" aria-controls="messages" role="tab" data-toggle="tab">Resultado Formulario</a></li>
 		<li role="presentation"><a href="#info" aria-controls="messages" role="tab" data-toggle="tab">Info Pagina</a></li>
 		<li role="presentation"><a href="#fireba" aria-controls="messages" role="tab" data-toggle="tab">Chat</a></li>
-			<li role="presentation"><a href="#angu" aria-controls="messages" role="tab" data-toggle="tab">Seccion Angular</a></li>
+		<li role="presentation"><a href="#angu" aria-controls="messages" role="tab" data-toggle="tab">Seccion Angular</a></li>
 	</ul>
 	<!-- Tab panes -->
 	<div class="tab-content">
@@ -166,10 +166,10 @@
 				<div class="col-md-6">
 					<div id="formulito" class="formulario">
 						<h4>SI QUIERES COMPRAR EL PRODUCTO REGISTRATE:</h4>
-						<form name="miformu"   method="get" onsubmit="validarEmail(document.miformu.email.value);">
+						<form name="miformu" method="get" onsubmit="validarEmail(document.miformu.email.value);">
 							 Nombre: <input type="text" name="nombre" id="nombre" ng-model="nombree" required>
 							Apellido: <input type="text" name="apellido" id="apellidos" ng-model="apellidoo" required><br>
-							 Email: <input type="text" name="email" id ="email"ng-model="emaill" required>
+							 Email: <input type="text" name="email" id="email" ng-model="emaill" required>
 							<p>
 								<input type="radio" name="sex" value="masculino">Masculino<br>
 								<input type="radio" name="sex" value="femenino">Femenino
@@ -223,59 +223,39 @@
 						</center>
 					</div>
 				</div>
-
-
-
-
-
-
-					<div role="tabpanel" class="tab-pane active" id="fireba">
-
-						<div class="chaat" id="wrapper">
-								<div id="menu">
-
-									<div style="clear:both"></div>
-								</div>
-
-								<div id="chatbox"></div>
-								<p> Bienvenido señor/a, <b></b></p>
-								<input name="usermsg" type="text" id="nameInput" size="63" />
-								<p> Escriba su mensaje y pulse enviar, <b></b></p>
-								<input name="usermsg" type="text" id="messageInput" size="63" />
-								<input name="submitmsg" type="submit"  id="nameInput" value="Enviar" onclick="enviar()"/>
-
-					 </div>
-
-
-
-					</div>
-
-
-
-
-
-
-
-					<div role="tabpanel" class="tab-pane active" id="angu">
-						<!--<div class="row" ng-controller="appController"> -->
-						<div class="col-md-6">
-
-				        <h1 class="subheader">Consumir un json con $http en AngularJS</h1>
-			         	<ul class="panel callout radius">
-					       	<li ng-repeat="data in datos">
-										<h2>Id: {{ data.id }} </h2>
-										<h2>Nombre: {{ data.nombre }}</h2>
-										<h2> Profesión: {{ data.profesion }}</h2>
-						     </li>
-				        </ul>
+				<div role="tabpanel" class="tab-pane active" id="fireba">
+					<div class="chaat" id="wrapper">
+						<div id="menu">
+							<div style="clear:both">
 							</div>
-             </div>
-						<!-- </div> -->
-
-
-
-
-
+						</div>
+						<div id="chatbox">
+						</div>
+						<p>
+							 Bienvenido señor/a, <b></b>
+						</p>
+						<input name="usermsg" type="text" id="nameInput" size="63"/>
+						<p>
+							 Escriba su mensaje y pulse enviar, <b></b>
+						</p>
+						<input name="usermsg" type="text" id="messageInput" size="63"/>
+						<input name="submitmsg" type="submit" id="nameInput" value="Enviar" onclick="enviar()"/>
+					</div>
+				</div>
+				<div role="tabpanel" class="tab-pane active" id="angu">
+					<!--<div class="row" ng-controller="appController"> -->
+					<div class="col-md-6">
+						<h1 class="subheader">Json con $http en AngularJS</h1>
+						<ul class="panel callout radius">
+							<li ng-repeat="data in datos">
+							<h2>Id: {{ data.id }} </h2>
+							<h2>Nombre: {{ data.nombre }}</h2>
+							<h2> Profesión: {{ data.profesion }}</h2>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- </div> -->
 				<div role="tabpanel" class="tab-pane" id="info">
 					<div class="container generalinfo">
 						<div class="row">
@@ -313,7 +293,7 @@
 					<br>
 					<br>
 					<div class="row">
-						<hr>
+
 						<div class="col-md-6 rich-text-editor parbase section">
 							<h2>
 							Windows<sup>®</sup>
@@ -357,9 +337,5 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 			<script type="text/javascript" src="js/bd.js"></script>
 			<script type="text/javascript" src="js/mycontroller.js"></script>
-
-
-
-
 			</body>
 			</html>
